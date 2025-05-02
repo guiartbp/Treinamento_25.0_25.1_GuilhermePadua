@@ -57,7 +57,7 @@ export const SideBar: React.FC = () => {
                     src="assets/images/quadrado.png"
                     alt="quadrado"
                 />
-                <img src="assets/icons/Log_Out.svg" alt="" />
+                <S.ImgLogout src="assets/icons/Log_Out.svg" alt="" />
             </S.DivQuadrado>
         </S.StyleSideBar>
     );

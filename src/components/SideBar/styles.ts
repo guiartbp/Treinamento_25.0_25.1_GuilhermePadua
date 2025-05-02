@@ -55,4 +55,9 @@ export const ImgQuadrado = styled.img`
     border-radius: 100px;
     width: 64px;
     height: 64px;
+    cursor: pointer;
+`;
+
+export const ImgLogout = styled.img`
+    cursor: pointer;
 `;

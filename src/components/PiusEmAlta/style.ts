@@ -16,6 +16,7 @@ export const DivImgAlta = styled.div`
     align-items: center;
     flex-shrink: 0;
     border-radius: 2px;
+    cursor: pointer;
 `;
 
 export const ImgImgAlta = styled.img`
@@ -41,6 +42,7 @@ export const H1TextAlta = styled.h1`
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    cursor: pointer;
 `;
 
 export const PTextAlta = styled.p`
@@ -54,4 +56,5 @@ export const PTextAlta = styled.p`
     line-height: 24px; /* 171.429% */
     letter-spacing: 0.5px;
     align-self: stretch;
+    cursor: pointer;
 `;

@@ -70,6 +70,7 @@ export const DivProfileEspecificaImg = styled.div`
 export const ImgProfile = styled.img`
     flex: 1 0 0;
     align-self: stretch;
+    cursor: pointer;
     background: lightgray 50% / contain no-repeat;
     border-radius: 100px;
 `;
@@ -83,6 +84,7 @@ export const DivNickname = styled.div`
 `;
 export const NomeProfile = styled.p`
     color: var(--Slate-12, #ecedee);
+    cursor: pointer;
     text-align: center;
 
     /* Subtitle/Bold */
@@ -95,6 +97,7 @@ export const NomeProfile = styled.p`
 export const NickNameProfile = styled.p`
     color: var(--Slate-12, #ecedee);
     text-align: center;
+    cursor: pointer;
     font-feature-settings: 'liga' off, 'clig' off;
 
     /* Body/Body Normal */
@@ -126,6 +129,7 @@ export const StatusIndividualPiu = styled.div`
 export const ImgStatusPiu = styled.img`
     width: 24px;
     height: 24px;
+    cursor: pointer;
 `;
 
 export const StatusNumeros = styled.p`
@@ -137,4 +141,5 @@ export const StatusNumeros = styled.p`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
 `;

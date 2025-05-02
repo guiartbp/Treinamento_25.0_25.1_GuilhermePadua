@@ -53,7 +53,10 @@ export const Piu: React.FC<Props> = ({
                 </>
                 <S.StatusPiu>
                     <S.StatusIndividualPiu>
-                        <S.ImgStatusPiu src="assets/icons/Arrow_Reload_02.svg" alt="rts" />
+                        <S.ImgStatusPiu
+                            src="assets/icons/Arrow_Reload_02.svg"
+                            alt="rts"
+                        />
                         <S.StatusNumeros>{rts}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                     <S.StatusIndividualPiu>
@@ -64,7 +67,10 @@ export const Piu: React.FC<Props> = ({
                         <S.StatusNumeros>{comentarios}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                     <S.StatusIndividualPiu>
-                        <S.ImgStatusPiu src="assets/icons/Heart_02.svg" alt="likes" />
+                        <S.ImgStatusPiu
+                            src="assets/icons/Heart_02.svg"
+                            alt="likes"
+                        />
                         <S.StatusNumeros>{like}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                 </S.StatusPiu>

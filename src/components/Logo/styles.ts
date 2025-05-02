@@ -5,6 +5,7 @@ export const ContentLogo = styled.div`
     flex-direction: row;
     align-items: center;
     gap: 16px;
+    cursor: pointer;
 `;
 
 export const LogoH1 = styled.h1`
