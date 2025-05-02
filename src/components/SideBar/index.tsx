@@ -1,6 +1,7 @@
 import { Logo } from 'components/Logo';
 import { MenuButton } from 'components/MenuButton';
 import { useState } from 'react';
+import { PiusEmAlta } from 'components/PiusEmAlta';
 import * as S from './styles';
 
 export const SideBar: React.FC = () => {
@@ -54,5 +55,19 @@ export const SideBar: React.FC = () => {
 };
 
 export const RightBar: React.FC = () => {
-    return <S.RightSide />;
+    return (
+        <S.RightSide>
+            <>
+                <>
+                    <img src="assets/images/frame.svg" alt="fire" />
+                    <p>Pius em alta</p>
+                    <PiusEmAlta
+                        imgAlta="assets/images/image8.jpg"
+                        tituloAlta="Eleições 2022"
+                        mensagemAlta="Eleição em São Paulo: veja Pius sobre a disputa de segundo turno entre Neymar e Vini Jr."
+                    />
+                </>
+            </>
+        </S.RightSide>
+    );
 };
