@@ -20,3 +20,13 @@ export const RightSide = styled(StyleSideBar)`
     border-left: 1px solid var(--Slate-8, #4c5155);
     border-right: none;
 `;
+
+export const DivButton = styled.div`
+    display: flex;
+    height: 528px;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    flex-shrink: 0;
+    align-self: stretch;
+`;
