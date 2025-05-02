@@ -8,11 +8,5 @@ export const StyleMain = styled.div`
     align-items: center;
     gap: 46px;
     background: var(--Slate-1, #151718);
-`;
-
-export const Separate = styled.hr`
-    height: 0px;
-    align-self: stretch;
-    stroke-width: 1px;
-    stroke: var(--Slate-8, #4c5155);
+    margin-left: 320px;
 `;

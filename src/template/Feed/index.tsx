@@ -1,6 +1,7 @@
 import React from 'react';
-import { RightBar, SideBar } from 'components/SideBar';
+import { SideBar } from 'components/SideBar';
 import { MainBar } from 'components/MainBar';
+import { RightBar } from 'components/RightSide';
 import * as S from './styles';
 
 const HomeTemplate = () => {

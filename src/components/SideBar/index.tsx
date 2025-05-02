@@ -62,21 +62,3 @@ export const SideBar: React.FC = () => {
         </S.StyleSideBar>
     );
 };
-
-export const RightBar: React.FC = () => {
-    return (
-        <S.RightSide>
-            <>
-                <>
-                    <img src="assets/images/frame.svg" alt="fire" />
-                    <p>Pius em alta</p>
-                    <PiusEmAlta
-                        imgAlta="assets/images/image8.jpg"
-                        tituloAlta="Eleições 2022"
-                        mensagemAlta="Eleição em São Paulo: veja Pius sobre a disputa de segundo turno entre Neymar e Vini Jr."
-                    />
-                </>
-            </>
-        </S.RightSide>
-    );
-};

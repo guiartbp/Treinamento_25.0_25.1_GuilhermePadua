@@ -2,13 +2,14 @@ import { Piu } from 'components/Piu';
 import { PostPiu } from 'components/PostPiu';
 import { SearchPiu } from 'components/SearchPiu';
 import * as S from './styles';
+import { Line } from 'components/Line';
 
 export const MainBar: React.FC = () => {
     return (
         <S.StyleMain>
             <SearchPiu />
             <PostPiu />
-            <S.Separate />
+            <Line/>
             <Piu
                 fotoUrl="assets/images/quadrado.png"
                 nomeUsuario="Neymar"

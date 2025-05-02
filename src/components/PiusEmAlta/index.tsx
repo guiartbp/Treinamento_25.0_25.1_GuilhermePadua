@@ -1,4 +1,5 @@
 import React from 'react';
+import * as S from './style';
 
 interface Props {
     imgAlta: string;
@@ -12,10 +13,14 @@ export const PiusEmAlta: React.FC<Props> = ({
     mensagemAlta
 }) => {
     return (
-        <>
-            <img src={imgAlta} alt={tituloAlta} />
-            <h1>{tituloAlta}</h1>
-            <p>{mensagemAlta}</p>
-        </>
+        <S.Container>
+            <S.DivImgAlta>
+                <S.ImgImgAlta src={imgAlta} alt={tituloAlta} />
+            </S.DivImgAlta>
+            <S.DivTextAlta>
+                <S.H1TextAlta>{tituloAlta}</S.H1TextAlta>
+                <S.PTextAlta>{mensagemAlta}</S.PTextAlta>
+            </S.DivTextAlta>{' '}
+        </S.Container>
     );
 };
