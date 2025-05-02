@@ -1,22 +1,24 @@
-import React from "react";
-import * as S from './style'
+import React, { useState } from 'react';
+import * as S from './style';
 
 export const PostPiu: React.FC = () => {
+    const [post, setPost] = useState('Quero dar um piu...');
+
     return (
-        <>
-            <input type="text" />
-            <>
+        <S.Container>
+            <S.Post>Quero dar um piu...</S.Post>
+            <S.PostOptions>
+                <S.PostAnexos>
+                    <S.ImgOptions src="assets/icons/Image_02.svg" alt="anexo" />
+                    <S.ImgOptions src="assets/icons/Video.svg" alt="video" />
+                    <S.ImgOptions src="assets/icons/Framecópia.svg" alt="Sorrisinho" />
+                    <S.ImgOptions src="assets/icons/Tag.svg" alt="etiquetas" />
+                    <S.ImgOptions src="assets/icons/Frame-1.svg" alt="gif" />
+                </S.PostAnexos>
                 <>
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
+                    <S.ImgOptions src="assets/icons/Paper_Plane.svg" alt="Enviar" />
                 </>
-                <>
-                    <img src="" alt="" />
-                </>
-            </>
-        </>
+            </S.PostOptions>
+        </S.Container>
     );
 };

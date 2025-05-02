@@ -8,6 +8,16 @@ export const MainBar: React.FC = () => {
         <S.StyleMain>
             <SearchPiu />
             <PostPiu />
+            <S.Separate />
+            <Piu
+                fotoUrl="assets/images/quadrado.png"
+                nomeUsuario="Neymar"
+                nickname="neymarjr"
+                mensagem="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+                rts={23}
+                comentarios={8}
+                like={12}
+            />
             <Piu
                 fotoUrl="assets/images/image8.jpg"
                 nomeUsuario="Neymar"

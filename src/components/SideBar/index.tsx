@@ -50,11 +50,13 @@ export const SideBar: React.FC = () => {
                         onClick={() => setBotaoAtivo('Configurações')}
                         isActive={botaoAtivo === 'Configurações'}
                     />
-               
-            </S.DivButton>
+                </S.DivButton>
             </S.DivSideCompleto>
             <S.DivQuadrado>
-                <S.ImgQuadrado src="assets/icons/quadrado.png" alt="quadrado" />
+                <S.ImgQuadrado
+                    src="assets/images/quadrado.png"
+                    alt="quadrado"
+                />
                 <img src="assets/icons/Log_Out.svg" alt="" />
             </S.DivQuadrado>
         </S.StyleSideBar>

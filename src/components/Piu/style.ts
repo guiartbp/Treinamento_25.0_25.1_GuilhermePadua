@@ -12,11 +12,10 @@ export const PiuMensagem = styled.p`
 export const Container = styled.div`
     display: flex;
     width: 784px;
-    padding: 32px;
+    gap: 46px;
+    padding: 0 32px;
     flex-direction: column;
     align-items: center;
-    gap: 46px;
-    background: var(--Slate-1, #151718);
 `;
 
 export const DivPius = styled.div`
@@ -66,15 +65,13 @@ export const DivProfileEspecificaImg = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    border-radius: 100px;
-    background: #fff;
 `;
 
 export const ImgProfile = styled.img`
     flex: 1 0 0;
     align-self: stretch;
     background: lightgray 50% / contain no-repeat;
+    border-radius: 100px;
 `;
 
 export const DivNickname = styled.div`
@@ -112,6 +109,7 @@ export const NickNameProfile = styled.p`
 export const DeletePiu = styled.img`
     width: 24px;
     height: 24px;
+    cursor: pointer;
 `;
 
 export const StatusPiu = styled.div`

@@ -1,5 +1,4 @@
 import React from 'react';
-import * as S from './style';
 
 interface Props {
     imgAlta: string;
@@ -7,7 +6,11 @@ interface Props {
     mensagemAlta: string;
 }
 
-export const PiusEmAlta: React.FC = ({ imgAlta, tituloAlta, mensagemAlta }) => {
+export const PiusEmAlta: React.FC<Props> = ({
+    imgAlta,
+    tituloAlta,
+    mensagemAlta
+}) => {
     return (
         <>
             <img src={imgAlta} alt={tituloAlta} />
