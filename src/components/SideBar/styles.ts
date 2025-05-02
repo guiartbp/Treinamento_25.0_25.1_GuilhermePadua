@@ -22,6 +22,7 @@ export const RightSide = styled(StyleSideBar)`
 `;
 
 export const DivButton = styled.div`
+    font-family: 'Poppins', sans-serif;
     display: flex;
     height: 528px;
     flex-direction: column;

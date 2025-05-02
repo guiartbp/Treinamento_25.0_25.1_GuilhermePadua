@@ -16,6 +16,7 @@ export const Container = styled.div<ContainerProps>`
 `;
 
 export const StyleMenuP = styled.p`
+    font-family: 'Poppins', sans-serif;
     display: flex;
     width: 179px;
     height: 57px;
