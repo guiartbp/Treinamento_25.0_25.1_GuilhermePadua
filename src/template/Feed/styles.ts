@@ -18,7 +18,7 @@ export const Container = styled.div`
     min-height: 100vh;
     width: 100%;
     padding: ${({ theme }) => `${theme.space[5]}px`};
-    flex-direction: column;
+    flex-direction: row;
     background: linear-gradient(
         135deg,
         ${({ theme }) => theme.colors.sky1} 0%,

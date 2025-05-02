@@ -8,19 +8,19 @@ A live demo of this template is available at: <!-- GITHUB_PAGES_URL -->
 
 ## 🛠️ What is included?
 
-- Next.js 15+
-- TypeScript
-- Styled Components
-- Storybook
-- Husky (Git hooks)
-- ESLint
-- Prettier
-- Jest
-- React Testing Library
-- Radix UI
-- Stitches
-- Chromatic
-- GitHub Actions for automatic deployment
+-   Next.js 15+
+-   TypeScript
+-   Styled Components
+-   Storybook
+-   Husky (Git hooks)
+-   ESLint
+-   Prettier
+-   Jest
+-   React Testing Library
+-   Radix UI
+-   Stitches
+-   Chromatic
+-   GitHub Actions for automatic deployment
 
 ## 🧿 How to use
 
@@ -93,5 +93,5 @@ This template is configured for automatic deployment to GitHub Pages through Git
 
 This template has other configurations that use the main branch as base. To access them, switch to the appropriate branch:
 
-- Material UI: `feat/MaterialUI`
-- Next.js 12 + React Query: `feat/next12`
+-   Material UI: `feat/MaterialUI`
+-   Next.js 12 + React Query: `feat/next12`

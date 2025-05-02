@@ -8,22 +8,22 @@ Este template faz parte do programa de capacitação técnica da Poli Junior, pr
 
 ## 🔎 Demonstração
 
-Uma demonstração online deste template está disponível em:  https://guiartbp.github.io/Treinamento_25.0_25.1_GuilhermePadua/
+Uma demonstração online deste template está disponível em: https://guiartbp.github.io/Treinamento_25.0_25.1_GuilhermePadua/
 
 ## 🛠️ Tecnologias e ferramentas
 
-- Next.js 15+
-- TypeScript
-- Styled Components
-- Storybook
-- Husky (Git hooks)
-- ESLint
-- Prettier
-- Jest
-- React Testing Library
-- Radix UI
-- Stitches
-- GitHub Actions para deploy automático
+-   Next.js 15+
+-   TypeScript
+-   Styled Components
+-   Storybook
+-   Husky (Git hooks)
+-   ESLint
+-   Prettier
+-   Jest
+-   React Testing Library
+-   Radix UI
+-   Stitches
+-   GitHub Actions para deploy automático
 
 ## 🧿 Como utilizar
 
