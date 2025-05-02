@@ -10,7 +10,7 @@ export const ContentLogo = styled.div`
 export const LogoH1 = styled.h1`
     color: var(--Slate-12, #ecedee);
     font-family: Nunito;
-    font-size: 80%;
+    font-size: 24px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;

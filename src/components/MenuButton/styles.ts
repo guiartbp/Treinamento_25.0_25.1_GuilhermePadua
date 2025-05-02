@@ -6,17 +6,21 @@ interface ContainerProps {
 
 export const Container = styled.div<ContainerProps>`
     display: flex;
-    background-color: ${({ isActive }) => (isActive ? '#333' : 'transparent')};
     cursor: pointer;
-    padding: 12px;
-    display: flex;
     align-items: center;
+    padding: 0px 16px;
     gap: 10px;
-    border-radius: 8px;
+
+    ${({ isActive }) =>
+        isActive &&
+        `
+      width: 304px;
+      border-radius: 0px 80px 80px 0px;
+      background: var(--Indigo-9, #3E63DD);
+    `}
 `;
 
 export const StyleMenuP = styled.p`
-    font-family: 'Poppins', sans-serif;
     display: flex;
     width: 179px;
     height: 57px;
@@ -25,9 +29,11 @@ export const StyleMenuP = styled.p`
     flex-shrink: 0;
     color: var(--Slate-12, #ecedee);
     /* Subtitle/Bold */
-    font-family: Nunito;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    font-family: 'Poppins', sans-serif;
+    gap
+
 `;

@@ -22,36 +22,53 @@ export const Piu: React.FC<Props> = ({
 }) => {
     return (
         <S.Container>
-            <>
-                <>
-                    <img src={fotoUrl} alt={nomeUsuario} />
-                    <h3>{nomeUsuario}</h3>
-                    <h4>{nickname}</h4>
-                </>
-                <>
-                    <img src="assets/images/delete.svg" alt="delete" />
-                </>
-            </>
-            <>
-                <S.Oimeuchapa>{mensagem}</S.Oimeuchapa>
-            </>
-            <>
-                <>
-                    <img src="assets/images/rts.svg" alt="rts" />
-                    <h5>{rts}</h5>
-                </>
-                <>
-                    <img
-                        src="assets/images/comentarios.svg"
-                        alt="comentarios"
+            <S.DivPius>
+                <S.DivIndividualPiu>
+                    <S.DivProfilePiu>
+                        <S.DivProfileIndividual>
+                            <S.DivProfileImg>
+                                <S.DivProfileEspecificaImg>
+                                    <S.ImgProfile
+                                        src={fotoUrl}
+                                        alt={nomeUsuario}
+                                    />
+                                </S.DivProfileEspecificaImg>
+                            </S.DivProfileImg>
+                            <S.DivNickname>
+                                <S.NomeProfile>{nomeUsuario}</S.NomeProfile>
+                                <S.NickNameProfile>
+                                    @{nickname}
+                                </S.NickNameProfile>
+                            </S.DivNickname>
+                        </S.DivProfileIndividual>
+                    </S.DivProfilePiu>
+                    <S.DeletePiu
+                        src="assets/icons/Trash_Full.svg"
+                        alt="delete"
                     />
-                    <h5>{comentarios}</h5>
-                </>
+                </S.DivIndividualPiu>
+
                 <>
-                    <img src="assets/images/like.svg" alt="likes" />
-                    <h5>{like}</h5>
+                    <S.PiuMensagem>{mensagem}</S.PiuMensagem>
                 </>
-            </>
+                <S.StatusPiu>
+                    <S.StatusIndividualPiu>
+                        <S.ImgStatusPiu src="assets/icons/Arrow_Reload_02.svg" alt="rts" />
+                        <S.StatusNumeros>{rts}</S.StatusNumeros>
+                    </S.StatusIndividualPiu>
+                    <S.StatusIndividualPiu>
+                        <S.ImgStatusPiu
+                            src="assets/icons/Chat_Circle.svg"
+                            alt="comentarios"
+                        />
+                        <S.StatusNumeros>{comentarios}</S.StatusNumeros>
+                    </S.StatusIndividualPiu>
+                    <S.StatusIndividualPiu>
+                        <S.ImgStatusPiu src="assets/icons/Heart_02.svg" alt="likes" />
+                        <S.StatusNumeros>{like}</S.StatusNumeros>
+                    </S.StatusIndividualPiu>
+                </S.StatusPiu>
+            </S.DivPius>
         </S.Container>
     );
 };
