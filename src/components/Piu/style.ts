@@ -143,3 +143,13 @@ export const StatusNumeros = styled.p`
     line-height: normal;
     cursor: pointer;
 `;
+
+export const ContainerComents = styled.div`
+    display: flex;
+    width: 720px;
+    padding: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+`;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './styles';
 
-
 interface Props {
     imageUrl: string;
     textMenu: string;
@@ -14,7 +13,6 @@ export const MenuButton: React.FC<Props> = ({
     onClick,
     isActive
 }) => {
-
     return (
         <S.Container isActive={isActive} onClick={onClick}>
             <img src={imageUrl} alt="{textMenu}" />

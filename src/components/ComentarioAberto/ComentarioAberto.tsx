@@ -1,15 +1,26 @@
 import React from 'react';
+import * as S from './style';
 
-export const ComentarioAberto: React.FC = () => {
+interface Props {
+    ComentNome: string;
+    ComentMensagem: string;
+}
+
+export const ComentarioAberto: React.FC<Props> = ({
+    ComentNome,
+    ComentMensagem
+}) => {
     return (
-        <div
-            style={{
-                padding: '10px',
-                border: '1px solid gray',
-                marginTop: '10px'
-            }}
-        >
-            Eu sou o Componente A!
-        </div>
+        <>
+            <S.ProfileComent>
+                <S.FotoComent>
+                    <S.FotoImgComent src="assets/images/quadrado.png" />
+                </S.FotoComent>
+                <S.ProfileUser>
+                    <S.UserName>{ComentNome}</S.UserName>
+                    <S.UserMessage>{ComentMensagem}</S.UserMessage>
+                </S.ProfileUser>
+            </S.ProfileComent>
+        </>
     );
 };

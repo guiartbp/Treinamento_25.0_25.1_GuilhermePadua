@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Comentario } from 'components/Comentario';
 import { ComentarioAberto } from 'components/ComentarioAberto/ComentarioAberto';
 import * as S from './style';
+import { Line } from 'components/Line';
+import { BarraDigital } from 'components/BarraDigital';
 
 interface Props {
     fotoUrl: string;
@@ -79,8 +81,34 @@ export const Piu: React.FC<Props> = ({
                         <S.StatusNumeros>{like}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                 </S.StatusPiu>
+                {mostrarComent && (
+                    <>
+                        <Line />
+                        <BarraDigital
+                            text="Comentar..."
+                            image="assets/icons/Paper_Plane.svg"
+                        />
+                    </>
+                )}
+                {mostrarComent && (
+                    <ComentarioAberto
+                        ComentNome="Quadrado Mágico"
+                        ComentMensagem="A Fila do bandeijão é ruim, mas ficar sem o bandeijão é pior."
+                    />
+                )}
+                {mostrarComent && (
+                    <ComentarioAberto
+                        ComentNome="Quadrado Mágico"
+                        ComentMensagem="A Fila do bandeijão é ruim, mas ficar sem o bandeijão é pior."
+                    />
+                )}
+                {mostrarComent && (
+                    <ComentarioAberto
+                        ComentNome="Quadrado Mágico"
+                        ComentMensagem="A Fila do bandeijão é ruim, mas ficar sem o bandeijão é pior."
+                    />
+                )}
             </S.DivPius>
-            {mostrarComent && <ComentarioAberto />}
         </S.Container>
     );
 };

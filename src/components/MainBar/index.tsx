@@ -1,13 +1,16 @@
 import { Piu } from 'components/Piu';
 import { PostPiu } from 'components/PostPiu';
-import { SearchPiu } from 'components/SearchPiu';
+import { BarraDigital } from 'components/BarraDigital';
 import { Line } from 'components/Line';
 import * as S from './styles';
 
 export const MainBar: React.FC = () => {
     return (
         <S.StyleMain>
-            <SearchPiu />
+            <BarraDigital
+                text="Ouvir um piu..."
+                image="assets/icons/ci_search.svg"
+            />
             <PostPiu />
             <Line />
             <Piu
