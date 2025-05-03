@@ -16,18 +16,22 @@ export const Container = styled.div`
     background: var(--Slate-8, #4c5155);
 `;
 
-export const Post = styled.p`
-    width: 160px;
-
+export const Post = styled.input`
+    width: 100%;
     color: var(--Slate-12, #ecedee);
-    text-align: center;
-
-    /* Subtitle/Normal */
+    text-align: left;
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    ::placeholder {
+        color: var(--Slate-11, #b1b5b7); // opcional
+    }
 `;
 
 export const PostOptions = styled.div`

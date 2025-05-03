@@ -26,8 +26,21 @@ export const Piu: React.FC<Props> = ({
 }) => {
     const [mostrarComent, setMostrarComent] = useState(false);
 
+    const nicknameUsuarioLogado = 'user';
+
     const abrirComent = () => {
         setMostrarComent((prev) => !prev);
+    };
+    const [curtido, setCurtido] = useState(false);
+    const [likes, setLikes] = useState(like);
+
+    const alternarLike = () => {
+        if (curtido) {
+            setLikes(likes - 1);
+        } else {
+            setLikes(likes + 1);
+        }
+        setCurtido(!curtido);
     };
 
     return (
@@ -52,10 +65,12 @@ export const Piu: React.FC<Props> = ({
                             </S.DivNickname>
                         </S.DivProfileIndividual>
                     </S.DivProfilePiu>
-                    <S.DeletePiu
-                        src="assets/icons/Trash_Full.svg"
-                        alt="delete"
-                    />
+                    {nickname === nicknameUsuarioLogado && (
+                        <S.DeletePiu
+                            src="assets/icons/Trash_Full.svg"
+                            alt="delete"
+                        />
+                    )}
                 </S.DivIndividualPiu>
 
                 <>
@@ -73,12 +88,12 @@ export const Piu: React.FC<Props> = ({
                         <Comentario aoClicar={abrirComent} />
                         <S.StatusNumeros>{comentarios}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
-                    <S.StatusIndividualPiu>
+                    <S.StatusIndividualPiu onClick={alternarLike}>
                         <S.ImgStatusPiu
                             src="assets/icons/Heart_02.svg"
                             alt="likes"
                         />
-                        <S.StatusNumeros>{like}</S.StatusNumeros>
+                        <S.StatusNumeros>{likes}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                 </S.StatusPiu>
                 {mostrarComent && (

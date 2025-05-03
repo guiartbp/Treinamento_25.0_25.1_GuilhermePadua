@@ -13,7 +13,6 @@ export const Container = styled.div`
     display: flex;
     width: 100%;
     gap: 46px;
-    padding: 0 32px;
     flex-direction: column;
     align-items: center;
 `;
@@ -142,4 +141,7 @@ export const StatusNumeros = styled.p`
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
+    &:hover {
+        color: #aaa;
+    }
 `;

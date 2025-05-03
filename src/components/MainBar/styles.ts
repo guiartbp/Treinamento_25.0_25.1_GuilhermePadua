@@ -8,5 +8,9 @@ export const StyleMain = styled.div`
     flex-direction: column;
     gap: 46px;
     background: var(--Slate-1, #151718);
-    margin-left: 320px; // compensa a sidebar fixa
+    margin-left: 320px;
+    margin-right: 336px;
+    width: calc(100% - 656px);
+    overflow-y: auto;
+    padding: 32px;
 `;

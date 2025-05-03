@@ -2,14 +2,19 @@ import styled from 'styled-components';
 
 export const RightSide = styled.div`
     width: 336px;
-    min-height: 100vh;
+    max-height: 100vh;
     padding: 32px 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
     border-left: 1px solid var(--Slate-8, #4c5155);
+    overflow-y: auto;
+    position: fixed;
     background: var(--Slate-2, #1a1d1e);
+    right: 0;
+    top: 0;
+    z-index: 10;
 `;
 
 export const TitleRightSide = styled.div`

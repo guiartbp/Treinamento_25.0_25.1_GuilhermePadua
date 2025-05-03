@@ -4,7 +4,7 @@ import * as S from './style';
 export const PostPiu: React.FC = () => {
     return (
         <S.Container>
-            <S.Post>Quero dar um piu...</S.Post>
+            <S.Post placeholder="Quero dar um piu..." />
             <S.PostOptions>
                 <S.PostAnexos>
                     <S.ImgOptions src="assets/icons/Image_02.svg" alt="anexo" />

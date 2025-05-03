@@ -15,18 +15,20 @@ export const MainBar: React.FC = () => {
             <Line />
             <Piu
                 fotoUrl="assets/images/quadrado.png"
-                nomeUsuario="Neymar"
-                nickname="neymarjr"
-                mensagem="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+                nomeUsuario="Nome de usuário"
+                nickname="user"
+                mensagem="only love can hurt like this... 
+ ᶜᵃᵈᵉ ᵒ ˡᵒˡᵒ only love can hurt like this  ᵐᵉ ᵈᵃ ᵒ ˡᵒˡᵒ
+"
                 rts={23}
                 comentarios={8}
                 like={12}
             />
             <Piu
                 fotoUrl="assets/images/image8.jpg"
-                nomeUsuario="Neymar"
-                nickname="neymarjr"
-                mensagem="Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+                nomeUsuario="Pedro Souza"
+                nickname="pebaiano"
+                mensagem="NÃO há imoralidade em furar a fila do bandejão quem não defende é porque não tem amigos"
                 rts={23}
                 comentarios={8}
                 like={12}
