@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const RightSide = styled.div`
     width: 336px;
-    max-height: 100vh;
+    height: 100%;
     padding: 32px 16px;
     display: flex;
     flex-direction: column;
