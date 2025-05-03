@@ -13,4 +13,9 @@ export const StyleMain = styled.div`
     width: calc(100% - 656px);
     overflow-y: auto;
     padding: 32px;
+    @media (max-width: 768px) {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
 `;

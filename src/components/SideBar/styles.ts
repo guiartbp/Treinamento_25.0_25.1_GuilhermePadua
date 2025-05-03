@@ -19,8 +19,7 @@ export const StyleSideBar = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    width: 23%;
-    max-width: 320px;
+    width: 320px;
     height: 100vh;
     padding: 32px 0px;
     display: flex;
@@ -30,6 +29,11 @@ export const StyleSideBar = styled.div`
     border-right: 1px solid var(--Slate-8, #4c5155);
     background: var(--Slate-2, #1a1d1e);
     z-index: 10;
+    @media (max-width: 768px) {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
 `;
 
 export const DivButton = styled.div`

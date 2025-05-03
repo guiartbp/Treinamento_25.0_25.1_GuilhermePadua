@@ -15,6 +15,10 @@ export const RightSide = styled.div`
     right: 0;
     top: 0;
     z-index: 10;
+    @media (max-width: 768px) {
+        width: 100%;
+        position: relative;
+    }
 `;
 
 export const TitleRightSide = styled.div`
