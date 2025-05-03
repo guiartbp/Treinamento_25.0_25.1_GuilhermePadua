@@ -1,7 +1,6 @@
 import { Logo } from 'components/Logo';
 import { MenuButton } from 'components/MenuButton';
 import { useState } from 'react';
-import { PiusEmAlta } from 'components/PiusEmAlta';
 import * as S from './styles';
 
 export const SideBar: React.FC = () => {

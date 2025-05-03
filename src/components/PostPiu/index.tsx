@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as S from './style';
 
 export const PostPiu: React.FC = () => {
-    const [post, setPost] = useState('Quero dar um piu...');
-
     return (
         <S.Container>
             <S.Post>Quero dar um piu...</S.Post>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ImgOptions, Post } from 'components/PostPiu/style';
+import { ImgOptions } from 'components/PostPiu/style';
 import * as S from './style';
 
 interface Props {
