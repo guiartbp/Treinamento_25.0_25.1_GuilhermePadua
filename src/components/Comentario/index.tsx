@@ -7,7 +7,8 @@ interface Props {
 
 export const Comentario: React.FC<Props> = ({ aoClicar }) => {
     return (
-        <S.ComentarioOpen onClick={aoClicar}
+        <S.ComentarioOpen
+            onClick={aoClicar}
             src="assets/icons/Chat_Circle.svg"
             alt="comentarios"
         />

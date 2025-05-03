@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Comentario } from 'components/Comentario';
-import * as S from './style';
 import { ComentarioAberto } from 'components/ComentarioAberto/ComentarioAberto';
+import * as S from './style';
 
 interface Props {
     fotoUrl: string;
@@ -25,7 +25,7 @@ export const Piu: React.FC<Props> = ({
     const [mostrarComent, setMostrarComent] = useState(false);
 
     const abrirComent = () => {
-        setMostrarComent(prev => !prev);
+        setMostrarComent((prev) => !prev);
     };
 
     return (
@@ -81,8 +81,6 @@ export const Piu: React.FC<Props> = ({
                 </S.StatusPiu>
             </S.DivPius>
             {mostrarComent && <ComentarioAberto />}
-
         </S.Container>
-        
     );
 };
