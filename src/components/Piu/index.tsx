@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Comentario } from 'components/Comentario';
 import * as S from './style';
+import { ComentarioAberto } from 'components/ComentarioAberto/ComentarioAberto';
 
 interface Props {
     fotoUrl: string;
@@ -20,6 +22,12 @@ export const Piu: React.FC<Props> = ({
     comentarios,
     like
 }) => {
+    const [mostrarComent, setMostrarComent] = useState(false);
+
+    const abrirComent = () => {
+        setMostrarComent(prev => !prev);
+    };
+
     return (
         <S.Container>
             <S.DivPius>
@@ -60,10 +68,7 @@ export const Piu: React.FC<Props> = ({
                         <S.StatusNumeros>{rts}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                     <S.StatusIndividualPiu>
-                        <S.ImgStatusPiu
-                            src="assets/icons/Chat_Circle.svg"
-                            alt="comentarios"
-                        />
+                        <Comentario aoClicar={abrirComent} />
                         <S.StatusNumeros>{comentarios}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                     <S.StatusIndividualPiu>
@@ -75,6 +80,9 @@ export const Piu: React.FC<Props> = ({
                     </S.StatusIndividualPiu>
                 </S.StatusPiu>
             </S.DivPius>
+            {mostrarComent && <ComentarioAberto />}
+
         </S.Container>
+        
     );
 };

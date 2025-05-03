@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
+import { ImgOptions, Post } from 'components/PostPiu/style';
 import * as S from './style';
-import { ImgOptions, Post } from "components/PostPiu/style";
 
 export const SearchPiu: React.FC = () => {
     return (

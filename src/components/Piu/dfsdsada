@@ -1,0 +1,16 @@
+
+
+export const ComponentePai: React.FC = () => {
+  const [mostrarComent, setMostrarComent] = useState(false);
+
+  const abrirComent = () => {
+    setMostrarComent(true);
+  };
+
+  return (
+    <div>
+      <ComponenteB aoClicar={abrirComent} />
+      {mostrarComent && <ComentarioAberto />}
+    </div>
+  );
+};
