@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 
 export const StyleMain = styled.div`
-    display: flex;
-    min-width: 784px;
-    max-width: 1300px;
+    flex: 1;
+    min-height: 100vh;
     padding: 32px;
+    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 46px;
     background: var(--Slate-1, #151718);
-    margin-left: 320px;
+    margin-left: 320px; // compensa a sidebar fixa
 `;

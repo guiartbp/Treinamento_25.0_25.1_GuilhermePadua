@@ -11,7 +11,7 @@ export const PiuMensagem = styled.p`
 `;
 export const Container = styled.div`
     display: flex;
-    width: 784px;
+    width: 100%;
     gap: 46px;
     padding: 0 32px;
     flex-direction: column;
@@ -142,14 +142,4 @@ export const StatusNumeros = styled.p`
     font-weight: 400;
     line-height: normal;
     cursor: pointer;
-`;
-
-export const ContainerComents = styled.div`
-    display: flex;
-    width: 720px;
-    padding: 24px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 30px;
-    width: 100%;
 `;

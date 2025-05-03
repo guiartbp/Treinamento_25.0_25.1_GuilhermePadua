@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
 export const RightSide = styled.div`
-    display: flex;
     width: 336px;
+    min-height: 100vh;
     padding: 32px 16px;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Comentario } from 'components/Comentario';
 import { ComentarioAberto } from 'components/ComentarioAberto/ComentarioAberto';
-import * as S from './style';
 import { Line } from 'components/Line';
 import { BarraDigital } from 'components/BarraDigital';
+import * as S from './style';
 
 interface Props {
     fotoUrl: string;
@@ -92,20 +92,20 @@ export const Piu: React.FC<Props> = ({
                 )}
                 {mostrarComent && (
                     <ComentarioAberto
-                        ComentNome="Quadrado Mágico"
-                        ComentMensagem="A Fila do bandeijão é ruim, mas ficar sem o bandeijão é pior."
+                        ComentNome="Quadrado Tangente"
+                        ComentMensagem="fkndl;ksaf dsmf; lasdmflk; fasdjlkfnsadjlk"
                     />
                 )}
                 {mostrarComent && (
                     <ComentarioAberto
-                        ComentNome="Quadrado Mágico"
-                        ComentMensagem="A Fila do bandeijão é ruim, mas ficar sem o bandeijão é pior."
+                        ComentNome="Quadrado Circular"
+                        ComentMensagem="fsdsf safd asdfkdasjfl;k."
                     />
                 )}
                 {mostrarComent && (
                     <ComentarioAberto
-                        ComentNome="Quadrado Mágico"
-                        ComentMensagem="A Fila do bandeijão é ruim, mas ficar sem o bandeijão é pior."
+                        ComentNome="Quadrado Retangular"
+                        ComentMensagem="Adsklfnmdlksnlsda."
                     />
                 )}
             </S.DivPius>
