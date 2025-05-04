@@ -21,7 +21,7 @@ export const ContainerHamburgerStyled = styled.div<SideBarProps>`
     margin: 0; 
     padding: 0; 
     box-sizing: border-box; 
-    @media (min-width: 768px) {
+    @media (min-width: 1050px) {
         display: none; /
     }
 `;
@@ -36,7 +36,7 @@ export const HamburgerButton = styled.button<SideBarProps>`
     transform: translateY(-50%);
     z-index: 1100;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1050px) {
         display: none;
     }
 
@@ -63,7 +63,7 @@ export const StyleMain = styled.div<SideBarProps>`
     margin-left: 320px;
     margin-right: 336px;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1050px) {
         padding: 92px 32px 32px;
 
         width: 100%;
@@ -97,7 +97,7 @@ export const RightBarButton = styled.button<RightBarProps>`
         height: 24px;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1050px) {
         display: none;
     }
 `;

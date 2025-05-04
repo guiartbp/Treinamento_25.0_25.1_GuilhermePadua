@@ -21,7 +21,7 @@ export const RightSide = styled.div<Props>`
     z-index: 10;
     transition: right 0.3s ease-in-out;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1050px) {
         right: ${({ isOpen }) => (isOpen ? '0' : '-336px')};
         display: none;
     }
