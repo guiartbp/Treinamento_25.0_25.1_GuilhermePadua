@@ -15,9 +15,13 @@ export const RightSide = styled.div`
     right: 0;
     top: 0;
     z-index: 10;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+
     @media (max-width: 768px) {
-        width: 100%;
-        position: relative;
+        display: none;
     }
 `;
 

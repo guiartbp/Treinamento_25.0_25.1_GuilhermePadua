@@ -1,4 +1,9 @@
+import React from 'react';
 import styled from 'styled-components';
+
+interface Props {
+    isOpen: boolean;
+}
 
 export const DivSideCompleto = styled.div`
     display: flex;
@@ -15,7 +20,7 @@ export const DivLogo = styled.div`
     gap: 16px;
 `;
 
-export const StyleSideBar = styled.div`
+export const StyleSideBar = styled.div<Props>`
     position: fixed;
     top: 0;
     left: 0;
@@ -29,10 +34,13 @@ export const StyleSideBar = styled.div`
     border-right: 1px solid var(--Slate-8, #4c5155);
     background: var(--Slate-2, #1a1d1e);
     z-index: 10;
-    @media (max-width: 768px) {
-        width: 100%;
-        position: relative;
-        height: auto;
+    transition: transform 0.3s ease-in-out;
+
+    transform: ${({ isOpen }) =>
+        isOpen ? 'translateX(0)' : 'translateX(-100%)'};
+
+    @media (min-width: 768px) {
+        transform: translateX(0); /* Sempre visível em telas maiores */
     }
 `;
 

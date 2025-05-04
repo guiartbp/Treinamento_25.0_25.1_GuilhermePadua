@@ -3,11 +3,15 @@ import { MenuButton } from 'components/MenuButton';
 import { useState } from 'react';
 import * as S from './styles';
 
-export const SideBar: React.FC = () => {
+interface Props {
+    isOpen: boolean;
+}
+
+export const SideBar: React.FC<Props> = ({ isOpen }) => {
     const [botaoAtivo, setBotaoAtivo] = useState('Página Inicial');
 
     return (
-        <S.StyleSideBar>
+        <S.StyleSideBar isOpen={isOpen}>
             <S.DivSideCompleto>
                 <S.DivLogo>
                     <Logo />
