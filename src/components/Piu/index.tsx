@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Comentario } from 'components/Comentario';
 import { ComentarioAberto } from 'components/ComentarioAberto/ComentarioAberto';
 import { Line } from 'components/Line';
 import { BarraDigital } from 'components/BarraDigital';
