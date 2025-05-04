@@ -14,16 +14,17 @@ export const RightSide = styled.div<Props>`
     gap: 24px;
     border-left: 1px solid var(--Slate-8, #4c5155);
     overflow-y: auto;
-    position: fixed;
     background: var(--Slate-2, #1a1d1e);
-    right: 0;
+    position: absolute;
     top: 0;
+    right: 0;
     z-index: 10;
-    transition: right 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 
     @media (max-width: 1050px) {
-        right: ${({ isOpen }) => (isOpen ? '0' : '-336px')};
-        display: none;
+        transform: ${({ isOpen }) =>
+            isOpen ? 'translateX(0)' : 'translateX(100%)'};
+        position: fixed;
     }
 
     &::-webkit-scrollbar {
@@ -31,7 +32,6 @@ export const RightSide = styled.div<Props>`
     }
     scrollbar-width: none;
 `;
-
 export const TitleRightSide = styled.div`
     display: flex;
     align-items: center;

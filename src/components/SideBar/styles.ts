@@ -39,7 +39,7 @@ export const StyleSideBar = styled.div<Props>`
         isOpen ? 'translateX(0)' : 'translateX(-100%)'};
 
     @media (min-width: 1050px) {
-        transform: translateX(0); /* Sempre visível em telas maiores */
+        transform: translateX(0);
     }
 `;
 

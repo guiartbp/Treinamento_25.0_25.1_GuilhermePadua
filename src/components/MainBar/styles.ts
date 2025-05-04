@@ -7,6 +7,8 @@ interface RightBarProps {
     isRightBarOpen?: boolean;
 }
 
+type CombinedProps = SideBarProps & RightBarProps;
+
 export const ContainerHamburgerStyled = styled.div<SideBarProps>`
     position: absolute; 
     top: 0;
@@ -49,7 +51,7 @@ export const HamburgerButton = styled.button<SideBarProps>`
     }
 `;
 
-export const StyleMain = styled.div<SideBarProps>`
+export const StyleMain = styled.div<CombinedProps>`
     flex: 1;
     min-height: 100vh;
     padding: 32px 32px 32px;
@@ -63,17 +65,21 @@ export const StyleMain = styled.div<SideBarProps>`
     margin-left: 320px;
     margin-right: 336px;
 
-    @media (max-width: 1050px) {
-        padding: 92px 32px 32px;
+    @media (max-width: 1050px){
+    padding: 92px 32px 32px;
+    width: 100%;
+    margin: 0;
 
-        width: 100%;
-        transform: ${({ isSidebarOpen }) =>
-            isSidebarOpen ? 'translateX(320px)' : 'translateX(0)'};
-        filter: ${({ isSidebarOpen }) =>
-            isSidebarOpen ? 'blur(2px)' : 'none'};
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 
-        margin: 0;
-    }
+    transform: ${({ isSidebarOpen, isRightBarOpen }) => {
+        const leftOffset = isSidebarOpen ? 320 : 0;
+        const rightOffset = isRightBarOpen ? -336 : 0;
+        const totalOffset = leftOffset + rightOffset;
+        return `translateX(${totalOffset}px)`;
+    }};
+
+    filter: ${({ isSidebarOpen }) => (isSidebarOpen ? 'blur(2px)' : 'none')};
 `;
 
 export const Container = styled.div`

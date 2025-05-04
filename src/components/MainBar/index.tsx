@@ -5,7 +5,7 @@ import { Line } from 'components/Line';
 import React, { useState } from 'react';
 import { SideBar } from 'components/SideBar';
 import { Logo } from 'components/Logo';
-import { RightSide } from 'components/RightSide/style';
+import { RightBar } from 'components/RightSide';
 import * as S from './styles';
 
 export const MainBar: React.FC = () => {
@@ -22,7 +22,6 @@ export const MainBar: React.FC = () => {
     return (
         <S.Container>
             <SideBar isOpen={isSidebarOpen} />
-            <RightSide isOpen={isRightBarOpen} />
             <S.StyleMain isSidebarOpen={isSidebarOpen}>
                 <S.ContainerHamburgerStyled isSidebarOpen={isSidebarOpen}>
                     <S.HamburgerButton
@@ -34,6 +33,8 @@ export const MainBar: React.FC = () => {
                         <span />
                     </S.HamburgerButton>
                     <Logo />
+                    <RightBar isOpen={isRightBarOpen} />
+
                     <S.RightBarButton
                         isRightBarOpen={isRightBarOpen}
                         onClick={toggleRightBar}
