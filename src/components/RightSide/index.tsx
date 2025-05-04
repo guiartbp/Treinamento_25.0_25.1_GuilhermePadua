@@ -3,9 +3,13 @@ import { PiusEmAlta } from 'components/PiusEmAlta';
 import { Line } from 'components/Line';
 import * as S from './style';
 
-export const RightBar: React.FC = () => {
+interface Props {
+    isOpen: boolean;
+}
+
+export const RightBar: React.FC<Props> = ({ isOpen }) => {
     return (
-        <S.RightSide>
+        <S.RightSide isOpen={isOpen}>
             <S.TitleRightSide>
                 <S.ImgTitleRightSide src="assets/icons/Frame.svg" alt="fire" />
                 <S.PTitleRightSide>Pius em alta</S.PTitleRightSide>

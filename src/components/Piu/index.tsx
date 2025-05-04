@@ -24,13 +24,34 @@ export const Piu: React.FC<Props> = ({
     comentarios,
     like
 }) => {
-    const [mostrarComent, setMostrarComent] = useState(false);
+    const [rtAtivo, setRtAtivo] = useState(false);
+    const [retweets, setRetweets] = useState(rts);
+    const alternarRt = () => {
+        if (rtAtivo) {
+            setRetweets(retweets - 1);
+        } else {
+            setRetweets(retweets + 1);
+        }
+        setRtAtivo((prev) => !prev);
+    };
 
+    const [mostrarComent, setMostrarComent] = useState(false);
+    const [comentarioAtivo, setComentarioAtivo] = useState(false);
+    const [comentarioPlus, setComentarioPlus] = useState(comentarios);
     const nicknameUsuarioLogado = 'user';
 
     const abrirComent = () => {
         setMostrarComent((prev) => !prev);
     };
+    const comentar = () => {
+        if (comentarioAtivo) {
+            setComentarioPlus(comentarioPlus - 1);
+        } else {
+            setComentarioPlus(comentarioPlus + 1);
+        }
+        setComentarioAtivo((prev) => !prev);
+    };
+
     const [curtido, setCurtido] = useState(false);
     const [likes, setLikes] = useState(like);
 
@@ -77,20 +98,35 @@ export const Piu: React.FC<Props> = ({
                     <S.PiuMensagem>{mensagem}</S.PiuMensagem>
                 </>
                 <S.StatusPiu>
-                    <S.StatusIndividualPiu>
+                    <S.StatusIndividualPiu onClick={alternarRt}>
                         <S.ImgStatusPiu
-                            src="assets/icons/Arrow_Reload_02.svg"
+                            src={
+                                rtAtivo
+                                    ? 'assets/icons/Arrow_Reload_02.svg'
+                                    : 'assets/icons/Arrow_Reload.svg'
+                            }
                             alt="rts"
                         />
-                        <S.StatusNumeros>{rts}</S.StatusNumeros>
+                        <S.StatusNumeros>{retweets}</S.StatusNumeros>{' '}
                     </S.StatusIndividualPiu>
-                    <S.StatusIndividualPiu>
-                        <Comentario aoClicar={abrirComent} />
-                        <S.StatusNumeros>{comentarios}</S.StatusNumeros>
+                    <S.StatusIndividualPiu onClick={abrirComent}>
+                        <S.ImgStatusPiu
+                            src={
+                                comentarioAtivo
+                                    ? 'assets/icons/Chat_Circle_Blue.svg'
+                                    : 'assets/icons/Chat_Circle.svg'
+                            }
+                            alt="comentários"
+                        />
+                        <S.StatusNumeros>{comentarioPlus}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                     <S.StatusIndividualPiu onClick={alternarLike}>
                         <S.ImgStatusPiu
-                            src="assets/icons/Heart_02.svg"
+                            src={
+                                curtido
+                                    ? 'assets/icons/Heart_02.svg'
+                                    : 'assets/icons/Heart.svg'
+                            }
                             alt="likes"
                         />
                         <S.StatusNumeros>{likes}</S.StatusNumeros>
@@ -102,6 +138,7 @@ export const Piu: React.FC<Props> = ({
                         <BarraDigital
                             text="Comentar..."
                             image="assets/icons/Paper_Plane.svg"
+                            onClick={comentar}
                         />
                     </>
                 )}

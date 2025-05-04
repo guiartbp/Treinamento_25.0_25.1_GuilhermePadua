@@ -5,17 +5,24 @@ import { Line } from 'components/Line';
 import React, { useState } from 'react';
 import { SideBar } from 'components/SideBar';
 import { Logo } from 'components/Logo';
+import { RightSide } from 'components/RightSide/style';
 import * as S from './styles';
 
 export const MainBar: React.FC = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isRightBarOpen, setIsRightBarOpen] = useState(false);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
     };
+    const toggleRightBar = () => {
+        setIsRightBarOpen(!isRightBarOpen);
+    };
+
     return (
         <S.Container>
             <SideBar isOpen={isSidebarOpen} />
+            <RightSide isOpen={isRightBarOpen} />
             <S.StyleMain isSidebarOpen={isSidebarOpen}>
                 <S.ContainerHamburgerStyled isSidebarOpen={isSidebarOpen}>
                     <S.HamburgerButton
@@ -27,6 +34,15 @@ export const MainBar: React.FC = () => {
                         <span />
                     </S.HamburgerButton>
                     <Logo />
+                    <S.RightBarButton
+                        isRightBarOpen={isRightBarOpen}
+                        onClick={toggleRightBar}
+                    >
+                        <img
+                            src="assets/icons/Frame.svg"
+                            alt="Abrir RightSideBar"
+                        />
+                    </S.RightBarButton>
                 </S.ContainerHamburgerStyled>
 
                 <BarraDigital
