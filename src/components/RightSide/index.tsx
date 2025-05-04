@@ -17,7 +17,7 @@ export const RightBar: React.FC<Props> = ({ isOpen }) => {
             <Line />
             <PiusEmAlta
                 imgAlta="assets/images/image8.jpg"
-                tituloAlta="Eleições 2022"
+                tituloAlta="Desculpa, não tive tempo de ser criativo"
                 mensagemAlta="Eleição em São Paulo: veja Pius sobre a disputa de segundo turno entre Neymar e Vini Jr."
             />
             <Line />

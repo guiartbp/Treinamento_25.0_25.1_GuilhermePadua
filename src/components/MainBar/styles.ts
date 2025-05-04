@@ -65,21 +65,23 @@ export const StyleMain = styled.div<CombinedProps>`
     margin-left: 320px;
     margin-right: 336px;
 
-    @media (max-width: 1050px){
-    padding: 92px 32px 32px;
-    width: 100%;
-    margin: 0;
+    @media (max-width: 1050px) {
+        padding: 92px 32px 32px;
+        width: 100%;
+        margin: 0;
 
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+        transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 
-    transform: ${({ isSidebarOpen, isRightBarOpen }) => {
-        const leftOffset = isSidebarOpen ? 320 : 0;
-        const rightOffset = isRightBarOpen ? -336 : 0;
-        const totalOffset = leftOffset + rightOffset;
-        return `translateX(${totalOffset}px)`;
-    }};
+        transform: ${({ isSidebarOpen, isRightBarOpen }) => {
+            const leftOffset = isSidebarOpen ? 320 : 0;
+            const rightOffset = isRightBarOpen ? -336 : 0;
+            const totalOffset = leftOffset + rightOffset;
+            return `translateX(${totalOffset}px)`;
+        }};
 
-    filter: ${({ isSidebarOpen }) => (isSidebarOpen ? 'blur(2px)' : 'none')};
+        filter: ${({ isSidebarOpen }) =>
+            isSidebarOpen ? 'blur(2px)' : 'none'};
+    }
 `;
 
 export const Container = styled.div`
