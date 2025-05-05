@@ -30,7 +30,7 @@ export const Post = styled.input`
     outline: none;
 
     ::placeholder {
-        color: var(--Slate-11, #b1b5b7); // opcional
+        color: var(--Slate-11, #b1b5b7);
     }
 `;
 

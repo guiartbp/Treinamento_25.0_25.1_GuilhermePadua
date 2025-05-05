@@ -12,6 +12,7 @@ interface Props {
     rts: number;
     comentarios: number;
     like: number;
+    onDelete?: () => void;
 }
 
 export const Piu: React.FC<Props> = ({
@@ -21,10 +22,16 @@ export const Piu: React.FC<Props> = ({
     mensagem,
     rts,
     comentarios,
-    like
+    like,
+    onDelete
 }) => {
-    const [rtAtivo, setRtAtivo] = useState(false);
     const [retweets, setRetweets] = useState(rts);
+    const [mostrarComent, setMostrarComent] = useState(false);
+    const [likes, setLikes] = useState(like);
+
+    const [rtAtivo, setRtAtivo] = useState(false);
+    const [curtido, setCurtido] = useState(false);
+
     const alternarRt = () => {
         if (rtAtivo) {
             setRetweets(retweets - 1);
@@ -34,25 +41,9 @@ export const Piu: React.FC<Props> = ({
         setRtAtivo((prev) => !prev);
     };
 
-    const [mostrarComent, setMostrarComent] = useState(false);
-    const [comentarioAtivo, setComentarioAtivo] = useState(false);
-    const [comentarioPlus, setComentarioPlus] = useState(comentarios);
-    const nicknameUsuarioLogado = 'user';
-
     const abrirComent = () => {
         setMostrarComent((prev) => !prev);
     };
-    const comentar = () => {
-        if (comentarioAtivo) {
-            setComentarioPlus(comentarioPlus - 1);
-        } else {
-            setComentarioPlus(comentarioPlus + 1);
-        }
-        setComentarioAtivo((prev) => !prev);
-    };
-
-    const [curtido, setCurtido] = useState(false);
-    const [likes, setLikes] = useState(like);
 
     const alternarLike = () => {
         if (curtido) {
@@ -60,7 +51,7 @@ export const Piu: React.FC<Props> = ({
         } else {
             setLikes(likes + 1);
         }
-        setCurtido(!curtido);
+        setCurtido((prev) => !prev);
     };
 
     return (
@@ -85,17 +76,16 @@ export const Piu: React.FC<Props> = ({
                             </S.DivNickname>
                         </S.DivProfileIndividual>
                     </S.DivProfilePiu>
-                    {nickname === nicknameUsuarioLogado && (
+                    {onDelete && (
                         <S.DeletePiu
                             src="assets/icons/Trash_Full.svg"
                             alt="delete"
+                            onClick={onDelete}
                         />
                     )}
                 </S.DivIndividualPiu>
 
-                <>
-                    <S.PiuMensagem>{mensagem}</S.PiuMensagem>
-                </>
+                <S.PiuMensagem>{mensagem}</S.PiuMensagem>
                 <S.StatusPiu>
                     <S.StatusIndividualPiu onClick={alternarRt}>
                         <S.ImgStatusPiu
@@ -106,18 +96,18 @@ export const Piu: React.FC<Props> = ({
                             }
                             alt="rts"
                         />
-                        <S.StatusNumeros>{retweets}</S.StatusNumeros>{' '}
+                        <S.StatusNumeros>{retweets}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                     <S.StatusIndividualPiu onClick={abrirComent}>
                         <S.ImgStatusPiu
                             src={
-                                comentarioAtivo
+                                mostrarComent
                                     ? 'assets/icons/Chat_Circle_Blue.svg'
                                     : 'assets/icons/Chat_Circle.svg'
                             }
                             alt="comentários"
                         />
-                        <S.StatusNumeros>{comentarioPlus}</S.StatusNumeros>
+                        <S.StatusNumeros>{comentarios}</S.StatusNumeros>
                     </S.StatusIndividualPiu>
                     <S.StatusIndividualPiu onClick={alternarLike}>
                         <S.ImgStatusPiu
@@ -137,7 +127,6 @@ export const Piu: React.FC<Props> = ({
                         <BarraDigital
                             text="Comentar..."
                             image="assets/icons/Paper_Plane.svg"
-                            onClick={comentar}
                         />
                     </>
                 )}

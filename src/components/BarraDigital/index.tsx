@@ -5,14 +5,13 @@ import * as S from './style';
 interface Props {
     text: string;
     image: string;
-    onClick?: () => void;
 }
 
-export const BarraDigital: React.FC<Props> = ({ text, image, onClick }) => {
+export const BarraDigital: React.FC<Props> = ({ text, image }) => {
     return (
         <S.Container>
             <S.OuvirPiu placeholder={text} />
-            <ImgOptions onClick={onClick} src={image} alt={text} />
+            <ImgOptions src={image} alt={text} />
         </S.Container>
     );
 };

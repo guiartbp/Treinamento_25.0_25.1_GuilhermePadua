@@ -1,12 +1,22 @@
+import React, { useState } from 'react';
 import { Piu } from 'components/Piu';
 import { PostPiu } from 'components/PostPiu';
 import { BarraDigital } from 'components/BarraDigital';
 import { Line } from 'components/Line';
-import React, { useState } from 'react';
 import { SideBar } from 'components/SideBar';
 import { Logo } from 'components/Logo';
 import { RightBar } from 'components/RightSide';
 import * as S from './styles';
+
+export interface Piu {
+    fotoUrl: string;
+    nomeUsuario: string;
+    nickname: string;
+    mensagem: string;
+    rts: number;
+    comentarios: number;
+    like: number;
+}
 
 export const MainBar: React.FC = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -17,6 +27,16 @@ export const MainBar: React.FC = () => {
     };
     const toggleRightBar = () => {
         setIsRightBarOpen(!isRightBarOpen);
+    };
+
+    const [pius, setPius] = useState<Piu[]>([]);
+
+    const addPiu = (novoPiu: Piu) => {
+        setPius([novoPiu, ...pius]);
+    };
+
+    const deletePiu = (index: number) => {
+        setPius(pius.filter((_, i) => i !== index));
     };
 
     return (
@@ -50,29 +70,25 @@ export const MainBar: React.FC = () => {
                     text="Ouvir um piu..."
                     image="assets/icons/ci_search.svg"
                 />
-                <PostPiu />
+                <PostPiu onAddPiu={addPiu} />
                 <Line />
-                <Piu
-                    fotoUrl="assets/images/quadrado.png"
-                    nomeUsuario="Nome de usuário"
-                    nickname="user"
-                    mensagem="only love can hurt like this... 
- ᶜᵃᵈᵉ ᵒ ˡᵒˡᵒ only love can hurt like this  ᵐᵉ ᵈᵃ ᵒ ˡᵒˡᵒ
-"
-                    rts={23}
-                    comentarios={8}
-                    like={12}
-                />
-                <Piu
-                    fotoUrl="assets/images/image8.jpg"
-                    nomeUsuario="Pedro Souza"
-                    nickname="pebaiano"
-                    mensagem="NÃO há imoralidade em furar a fila do bandejão quem não defende é porque não tem amigos"
-                    rts={23}
-                    comentarios={8}
-                    like={12}
-                />
+
+                {pius.map((piu, index) => (
+                    <Piu
+                        // eslint-disable-next-line react/no-array-index-key
+                        key={index}
+                        fotoUrl={piu.fotoUrl}
+                        nomeUsuario={piu.nomeUsuario}
+                        nickname={piu.nickname}
+                        mensagem={piu.mensagem}
+                        rts={piu.rts}
+                        comentarios={piu.comentarios}
+                        like={piu.like}
+                        onDelete={() => deletePiu(index)}
+                    />
+                ))}
             </S.StyleMain>
         </S.Container>
     );
 };
+export { Piu };

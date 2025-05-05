@@ -15,7 +15,7 @@ export const RightSide = styled.div<Props>`
     border-left: 1px solid var(--Slate-8, #4c5155);
     overflow-y: auto;
     background: var(--Slate-2, #1a1d1e);
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     z-index: 10;
